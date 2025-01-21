@@ -111,7 +111,7 @@ securityContext: {}
 
 containerPorts:
   ## @param containerPorts.http Container port for HTTP
-  http: 0.0.0.0:11434
+  http: 11434
 
 livenessProbe:
   ## @param livenessProbe.enabled Enable liveness probe
