@@ -210,9 +210,7 @@ service:
 ingress:
   ## @param ingress.enabled Enable ingress controller resource
   enabled: true
-  annotations: {
-    nginx.ingress.kubernetes.io/proxy-read-timeout: 300
-                }
+  
   ## @param ingress.ingressClassName IngressClass that will be be used to implement the Ingress
   ingressClassName: ""
 
@@ -220,7 +218,9 @@ ingress:
   pathType: ImplementationSpecific
 
   ## @param ingress.annotations Ingress annotations
-  annotations: {}
+  annotations: {
+    nginx.ingress.kubernetes.io/proxy-read-timeout: 300
+    }
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
 
