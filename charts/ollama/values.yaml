@@ -118,7 +118,7 @@ livenessProbe:
   enabled: true
 
   ## @param livenessProbe.initialDelaySeconds Delay before the liveness probe is initiated
-  initialDelaySeconds: 0
+  initialDelaySeconds: 10
 
   ## @param livenessProbe.periodSeconds How often to perform the liveness probe
   periodSeconds: 10
@@ -137,7 +137,7 @@ readinessProbe:
   enabled: true
 
   ## @param readinessProbe.initialDelaySeconds Delay before the readiness probe is initiated
-  initialDelaySeconds: 0
+  initialDelaySeconds: 10
 
   ## @param readinessProbe.periodSeconds How often to perform the readiness probe
   periodSeconds: 10
@@ -209,7 +209,7 @@ service:
 
 ingress:
   ## @param ingress.enabled Enable ingress controller resource
-  enabled: false
+  enabled: true
 
   ## @param ingress.ingressClassName IngressClass that will be be used to implement the Ingress
   ingressClassName: ""
@@ -225,7 +225,7 @@ ingress:
   ## @param ingress.hosts[0].host Hostname to your Ollama installation
   ## @param ingress.hosts[0].paths Paths within the url structure
   hosts:
-    - host: ollama.local
+    - host: llm.stratocloud.eu
       paths:
         - /
 
