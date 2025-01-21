@@ -219,7 +219,7 @@ ingress:
 
   ## @param ingress.annotations Ingress annotations
   annotations: {
-   # kubernetes.io/proxy-read-timeout: "300"
+    kubernetes.io/proxy-read-timeout: '300'
    # kubernetes.io/ingress.class: "nginx"
     # kubernetes.io/tls-acme: "true"
                 }
